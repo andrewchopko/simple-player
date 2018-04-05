@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Audioplayer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="background"></div>
+    <div id="player">
+      <div class="player-card">
+        <div class="face front">
+          <div id="title-bg">
+            <div class="song-info">
+              <div class="song-name"></div>
+              <div class="singer"></div>
+            </div>
+          </div>
+          <div class="progress-wrapper">
+            <div class="progress-bar">
+              <div class="progress-bar-range"></div>
+            </div>
+          </div>
+          <div class="song-time">
+            <div class="time-now">00:00</div>
+            <div class="duration">00:00</div>
+          </div>
+          <div id="control-panel">
+            <div class="buttons">
+              <div class="button-wrapper"><div id="prev" onclick="trackList.prevAudio()"></div></div>
+              <div class="flip-play-pause-btn">
+                <div class="button-wrapper play button-face" onclick="togglePlayPause()"><div id="play" onclick="trackList.playAudio()"></div></div>
+                <div class="button-wrapper pause button-face hidden" onclick="togglePlayPause()"><div id="pause" onclick="trackList.pauseAudio()"></div></div>
+              </div>
+              <div class="button-wrapper"><div id="next" onclick="trackList.nextAudio()"></div></div>
+            </div>
+            <div id="control-bar">
+              <div class="bar-buttons">
+                <div class="bar-wrapper"><div id="speaker" onclick="trackList.mute()"></div></div>
+                <div class="bar-wrapper"><input id="sound-bar" type="range" min="0" max="1" step="0.01" value="0.99" onchange="trackList.volume(this.value)"/></div>
+                <div class="bar-wrapper"><div id="playlist" onclick="flipToPlaylist()"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <div id="playlist-header">
+            <div class="back-button-wrapper"><div id="back" onclick="flipToPlaylist()"></div></div>
+            <div class="header">Playlist</div>
+          </div>
+          <div id="song-list" class="scrollbar">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+      <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

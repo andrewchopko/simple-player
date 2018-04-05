@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700");
+body {
+  font-family: 'Lato', sans-serif; }
+
+.background {
+  background-image: url("images/vinil.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+#player {
+  width: 30%;
+  height: 90%;
+  display: block;
+  margin: 2% auto;
+  border-radius: 5px;
+  cursor: default;
+  position: relative;
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  perspective: 2000px; }
+
+#player .player-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.5s; }
+
+#player .player-card.flipped {
+  transform: rotateY(180deg); }
+
+#player .player-card .face {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  backface-visibility: hidden; }
+
+#player .player-card .front {
+  position: absolute;
+  z-index: 1; }
+
+.front {
+  background-color: #fff;
+  border-radius: 5px; }
+
+#player .player-card .back {
+  transform: rotateY(180deg);
+  position: absolute; }
+
+#title-bg {
+  width: 100%;
+  height: 70%;
+  background-color: seagreen;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-flow: column-reverse;
+  background-image: url("images/vinil.jpg");
+  background-size: cover;
+  background-blend-mode: multiply; }
+
+.song-info {
+  padding: 5%; }
+
+.song-name {
+  font-size: 2rem;
+  margin-bottom: 3%;
+  font-weight: 300;
+  letter-spacing: 3px; }
+
+.singer {
+  font-size: .9rem;
+  font-weight: 300;
+  letter-spacing: 1px; }
+
+#control-panel .buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 10%;
+  border-bottom: 1px solid #e1e1e1; }
+
+.button-wrapper {
+  display: flex;
+  align-items: center; }
+  .button-wrapper:hover {
+    animation: scaleHoverkButtons .5s;
+    animation-fill-mode: forwards; }
+  .button-wrapper:active {
+    animation: scaleClickButtons .2s; }
+
+.hidden {
+  display: none; }
+
+#prev {
+  background-image: url("images/next-track.png");
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  transform: scaleX(-1); }
+
+#play {
+  background-image: url("images/play-button-sing.png");
+  background-size: cover;
+  width: 45px;
+  height: 45px; }
+
+#pause {
+  background-image: url("images/pause-button.png");
+  background-size: cover;
+  width: 45px;
+  height: 45px; }
+
+#next {
+  background-image: url("images/next-track.png");
+  background-size: cover;
+  width: 45px;
+  height: 45px; }
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background: #e74; }
+  .progress-bar .progress-bar-range {
+    width: 0px;
+    height: inherit;
+    background: #111; }
+  .progress-bar:hover {
+    cursor: pointer;
+    animation-name: scaleProgress;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards; }
+
+.progress-wrapper {
+  height: 10px; }
+
+.song-time {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 2% 0; }
+
+.time-now {
+  font-weight: 300;
+  color: #000; }
+
+.duration {
+  font-weight: 400;
+  color: #e74; }
+
+#control-bar {
+  display: block; }
+
+.bar-wrapper {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-basis: 15%; }
+  .bar-wrapper:nth-of-type(2) {
+    flex-basis: 70%; }
+
+.bar-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0; }
+
+#speaker {
+  background-image: url("images/speaker-louder.png");
+  background-size: cover;
+  background-position: center;
+  width: 30px;
+  height: 30px; }
+  #speaker:hover {
+    cursor: pointer;
+    animation: scaleBarButtons .3s;
+    animation-fill-mode: forwards; }
+
+#playlist {
+  background-image: url("images/song-playlist.png");
+  background-size: cover;
+  background-position: center;
+  width: 30px;
+  height: 30px; }
+  #playlist:hover {
+    cursor: pointer;
+    animation: scaleBarButtons .3s;
+    animation-fill-mode: forwards; }
+
+#sound-bar {
+  -webkit-appearance: none;
+  flex-basis: 100%;
+  width: fit-content(100%);
+  height: 6px;
+  background: #e74;
+  outline: none;
+  opacity: .7;
+  transition: opacity .2s; }
+  #sound-bar:hover {
+    opacity: 1; }
+  #sound-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #000;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px; }
+    #sound-bar::-webkit-slider-thumb:hover {
+      cursor: pointer;
+      transform: scale(1.5);
+      transition: .3s; }
+
+.back {
+  border-radius: 5px;
+  background: #e3e3e3;
+  padding: 2% 3%; }
+
+#playlist-header {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 10%; }
+  #playlist-header #back {
+    background-image: url("images/back-arrow.png");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    flex-basis: 20%; }
+  #playlist-header .header {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    flex-basis: 80%; }
+
+.poster {
+  background-image: url("images/poster.jpg");
+  background-size: cover;
+  width: 50px;
+  height: 50px; }
+
+.back-button-wrapper {
+  width: 15px;
+  height: 15px; }
+
+.song {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 1%; }
+  .song .poster-wrapper {
+    width: 50px;
+    height: 50px;
+    flex-basis: 25%; }
+  .song .info {
+    flex-basis: 75%;
+    display: block; }
+    .song .info .author {
+      font-weight: 300;
+      font-size: 1.2rem; }
+    .song .info .song-name {
+      font-weight: 400;
+      font-size: 1.7rem; }
+
+.song.current {
+  color: #e74; }
+
+.scrollbar {
+  background-color: inherit;
+  float: left;
+  height: 85%;
+  width: 100%;
+  overflow-y: scroll; }
+
+#song-list::-webkit-scrollbar {
+  width: 5px;
+  background-color: #000; }
+
+#song-list::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: #e74; }
+
+@keyframes scaleClickButtons {
+  from {
+    transform: scale(1.3); }
+  to {
+    transform: scale(1.1); } }
+
+@keyframes scaleHoverkButtons {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.3); } }
+
+@keyframes scaleBarButtons {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.1); } }
+
+@keyframes scaleProgress {
+  from {
+    height: 5px; }
+  to {
+    height: 10px; } }

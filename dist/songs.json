@@ -1,0 +1,56 @@
+[
+  {
+    "poster": "../songs/hardkiss/hardkiss-poster.jpg",
+    "author": "The HardKiss",
+    "song": "Make-Up",
+    "src": "../songs/hardkiss/make-up.mp3"
+  },
+  {
+    "poster": "../songs/onuka/onuka-poster.jpg",
+    "author": "ONUKA",
+    "song": "Intro",
+    "src": "../songs/onuka/intro.mp3"
+  },
+  {
+    "poster": "../songs/onuka/onuka-poster.jpg",
+    "author": "ONUKA",
+    "song": "Misto",
+    "src": "../songs/onuka/misto.mp3"
+  },
+  {
+    "poster": "../songs/onuka/onuka-poster.jpg",
+    "author": "ONUKA",
+    "song": "Vidlik",
+    "src": "../songs/onuka/vidlik.mp3"
+  },
+  {
+    "poster": "../songs/rammstein/ramm-poster.jpg",
+    "author": "Rammstein",
+    "song": "sonne",
+    "src": "../songs/rammstein/sonne.mp3"
+  },
+  {
+    "poster": "../songs/hardkiss/hardkiss-poster.jpg",
+    "author": "The HardKiss",
+    "song": "Stones",
+    "src": "../songs/hardkiss/stones.mp3"
+  },
+  {
+    "poster": "../songs/rammstein/ramm-poster.jpg",
+    "author": "Rammstein",
+    "song": "Kokain",
+    "src": "../songs/rammstein/kokain.mp3"
+  },
+  {
+    "poster": "../songs/onuka/onuka-poster.jpg",
+    "author": "ONUKA",
+    "song": "Svitanok",
+    "src": "../songs/onuka/svitanok.mp3"
+  },
+  {
+    "poster": "../songs/onuka/onuka-poster.jpg",
+    "author": "ONUKA",
+    "song": "Time",
+    "src": "../songs/onuka/time.mp3"
+  }
+]
