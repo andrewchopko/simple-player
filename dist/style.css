@@ -44,6 +44,7 @@ body {
 
 #player .player-card .front {
   position: absolute;
+  min-width: 330px;
   z-index: 1; }
 
 .front {
